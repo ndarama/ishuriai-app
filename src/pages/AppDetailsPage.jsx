@@ -1,6 +1,5 @@
 import React from 'react';
 import { useParams, Link as RouterLink, useNavigate } from 'react-router-dom';
-import { useAuth } from '../contexts/AuthContext';
 import {
   Box,
   Container,
@@ -24,7 +23,6 @@ import { appsData } from '../data/apps';
 const AppDetailsPage = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const { isAuthenticated, user } = useAuth();
   const app = appsData.find((a) => a.slug === slug);
 
   React.useEffect(() => {
@@ -34,17 +32,10 @@ const AppDetailsPage = () => {
   }, [app, navigate]);
 
   const handleOpenApp = () => {
-    // Check if user is authenticated for paid apps
-    if (app.category !== 'free' && !isAuthenticated) {
-      navigate('/auth/login');
-      return;
-    }
-    
     // Define the app route mappings
     const appRoutes = {
       'ishuri-calculator': '/app/ishuri-calculator',
-      'ishuri-dictionary': '/app/ishuri-dictionary',
-      'ishuri-ai-assistant': '/app/ishuri-ai-assistant'
+      'ishuri-dictionary': '/app/ishuri-dictionary'
     };
     
     const route = appRoutes[app.slug];
@@ -54,21 +45,6 @@ const AppDetailsPage = () => {
       // For other apps, you can add their specific routes to the appRoutes object above
       console.log(`Opening ${app.name}... (route not yet implemented)`);
     }
-  };
-  
-  const canAccessApp = () => {
-    if (app.category === 'free') return true;
-    if (!isAuthenticated) return false;
-    // For now, let authenticated users access all apps
-    // Later you can add subscription plan checking here
-    return true;
-  };
-  
-  const getButtonText = () => {
-    if (app.category === 'free') return 'Open App';
-    if (!isAuthenticated) return 'Login to Access';
-    if (!canAccessApp()) return 'Subscribe to Access';
-    return 'Open App';
   };
 
   return (
@@ -126,9 +102,9 @@ const AppDetailsPage = () => {
             <Button 
               colorScheme="brand" 
               onClick={handleOpenApp}
-              disabled={false}
+              disabled={app.category !== 'free'}
             >
-              {getButtonText()}
+              {app.category === 'free' ? 'Open App' : 'Subscribe to Access'}
             </Button>
           </Flex>
         </Stack>
