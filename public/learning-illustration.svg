@@ -1,0 +1,34 @@
+<svg width="300" height="200" viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="300" height="200" rx="12" fill="#f0fdfa"/>
+<rect x="20" y="20" width="260" height="160" rx="8" fill="#14b8a6" opacity="0.1"/>
+
+<!-- Books stack -->
+<rect x="50" y="120" width="80" height="10" rx="2" fill="#14b8a6"/>
+<rect x="52" y="110" width="76" height="10" rx="2" fill="#0d9488"/>
+<rect x="54" y="100" width="72" height="10" rx="2" fill="#0f766e"/>
+
+<!-- Graduation cap -->
+<path d="M150 80L180 70L210 80L180 90L150 80Z" fill="#14b8a6"/>
+<rect x="175" y="75" width="10" height="20" fill="#0d9488"/>
+<circle cx="185" cy="75" r="3" fill="#0f766e"/>
+
+<!-- Light bulb (knowledge) -->
+<circle cx="220" cy="60" r="15" fill="#fbbf24" opacity="0.8"/>
+<rect x="215" y="75" width="10" height="8" fill="#78716c"/>
+<path d="M212 60L228 60M216 52L224 52M218 68L222 68" stroke="#f59e0b" stroke-width="2"/>
+
+<!-- Person figure -->
+<circle cx="100" cy="50" r="12" fill="#14b8a6"/>
+<rect x="92" y="62" width="16" height="20" rx="8" fill="#0d9488"/>
+<rect x="88" y="72" width="8" height="15" fill="#0f766e"/>
+<rect x="104" y="72" width="8" height="15" fill="#0f766e"/>
+
+<!-- Learning path -->
+<path d="M30 150Q80 140 130 145Q180 150 230 140Q270 130 280 135" stroke="#14b8a6" stroke-width="3" fill="none" stroke-dasharray="5,5"/>
+
+<!-- Achievement stars -->
+<path d="M250 40L253 47L260 47L254 52L256 59L250 55L244 59L246 52L240 47L247 47Z" fill="#fbbf24"/>
+<path d="M40 40L42 45L47 45L43 48L44 53L40 50L36 53L37 48L33 45L38 45Z" fill="#fbbf24"/>
+
+<text x="150" y="190" text-anchor="middle" fill="#0f766e" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Your Learning Journey Starts Here</text>
+</svg>

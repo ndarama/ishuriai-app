@@ -1,0 +1,67 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="400" height="300" rx="12" fill="#f0fdfa"/>
+
+<!-- Background elements -->
+<circle cx="350" cy="50" r="30" fill="#14b8a6" opacity="0.1"/>
+<circle cx="50" cy="250" r="40" fill="#0d9488" opacity="0.1"/>
+
+<!-- Main dashboard mockup -->
+<rect x="80" y="40" width="240" height="160" rx="8" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="90" y="50" width="220" height="30" fill="#14b8a6" rx="4"/>
+<text x="200" y="70" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold">Your Learning Dashboard</text>
+
+<!-- Progress bars -->
+<rect x="100" y="90" width="80" height="8" fill="#e5e7eb" rx="4"/>
+<rect x="100" y="90" width="60" height="8" fill="#14b8a6" rx="4"/>
+<text x="190" y="97" fill="#374151" font-family="Arial, sans-serif" font-size="10">Mathematics - 75%</text>
+
+<rect x="100" y="110" width="80" height="8" fill="#e5e7eb" rx="4"/>
+<rect x="100" y="110" width="48" height="8" fill="#0d9488" rx="4"/>
+<text x="190" y="117" fill="#374151" font-family="Arial, sans-serif" font-size="10">Science - 60%</text>
+
+<rect x="100" y="130" width="80" height="8" fill="#e5e7eb" rx="4"/>
+<rect x="100" y="130" width="72" height="8" fill="#0f766e" rx="4"/>
+<text x="190" y="137" fill="#374151" font-family="Arial, sans-serif" font-size="10">Languages - 90%</text>
+
+<!-- Charts/Stats -->
+<circle cx="270" cy="120" r="25" fill="none" stroke="#e5e7eb" stroke-width="6"/>
+<circle cx="270" cy="120" r="25" fill="none" stroke="#14b8a6" stroke-width="6" 
+        stroke-dasharray="100" stroke-dashoffset="25" stroke-linecap="round"/>
+<text x="270" y="125" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif" font-size="10" font-weight="bold">75%</text>
+
+<!-- Achievement badges -->
+<circle cx="110" cy="170" r="12" fill="#fbbf24"/>
+<text x="110" y="174" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8">★</text>
+
+<circle cx="140" cy="170" r="12" fill="#10b981"/>
+<text x="140" y="174" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8">✓</text>
+
+<circle cx="170" cy="170" r="12" fill="#6366f1"/>
+<text x="170" y="174" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8">🎯</text>
+
+<!-- Mobile app preview -->
+<rect x="30" y="120" width="40" height="70" rx="6" fill="white" stroke="#e5e7eb" stroke-width="2"/>
+<rect x="35" y="130" width="30" height="20" fill="#14b8a6" rx="2"/>
+<rect x="37" y="155" width="26" height="4" fill="#e5e7eb" rx="2"/>
+<rect x="37" y="162" width="20" height="4" fill="#e5e7eb" rx="2"/>
+<rect x="37" y="169" width="24" height="4" fill="#e5e7eb" rx="2"/>
+<circle cx="50" cy="180" r="6" fill="#14b8a6"/>
+
+<!-- Study materials -->
+<rect x="340" y="120" width="25" height="35" fill="#14b8a6" rx="2"/>
+<rect x="342" y="125" width="21" height="2" fill="white"/>
+<rect x="342" y="130" width="18" height="2" fill="white"/>
+<rect x="342" y="135" width="21" height="2" fill="white"/>
+
+<!-- Connecting lines -->
+<path d="M70 155L80 145" stroke="#14b8a6" stroke-width="2" stroke-dasharray="3,3"/>
+<path d="M320 145L340 135" stroke="#14b8a6" stroke-width="2" stroke-dasharray="3,3"/>
+
+<!-- Bottom text -->
+<text x="200" y="230" text-anchor="middle" fill="#0f766e" font-family="Arial, sans-serif" font-size="14" font-weight="bold">Personalized Learning Experience</text>
+<text x="200" y="250" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12">Track progress, access content anywhere, achieve your goals</text>
+
+<!-- Decorative elements -->
+<path d="M20 30L25 35L30 30M25 35L25 45" stroke="#14b8a6" stroke-width="2" stroke-linecap="round"/>
+<path d="M370 270L375 275L380 270M375 275L375 285" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+</svg>

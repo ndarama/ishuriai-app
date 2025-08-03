@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Simplified open‑book icon used as the logo for the Ishuri clone.  You can
+  replace this graphic with your own logo by placing another SVG at
+  public/logo.svg.
+-->
+<svg width="64" height="64" viewBox="0 0 24 24" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+  <path d="M2 5C2 4.44772 2.44772 4 3 4H9C9.55228 4 10 4.44772 10 5V19C10 19.5523 9.55228 20 9 20H3C2.44772 20 2 19.5523 2 19V5Z"
+        fill="#0d9488"/>
+  <path d="M14 5C14 4.44772 14.4477 4 15 4H21C21.5523 4 22 4.44772 22 5V19C22 19.5523 21.5523 20 21 20H15C14.4477 20 14 19.5523 14 19V5Z"
+        fill="#047857"/>
+</svg>
