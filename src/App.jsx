@@ -22,6 +22,9 @@ import ProfilePage from './pages/ProfilePage';
 import AccountPage from './pages/AccountPage';
 import BillingPage from './pages/BillingPage';
 import CalculatorPage from './pages/CalculatorPage';
+import DictionaryPage from './pages/DictionaryPage';
+import ExamsPrepLitePage from './pages/ExamsPrepLitePage';
+import AIAssistantPage from './pages/AIAssistantPage';
 
 /**
  * The top‑level App component registers all of the routes used in the
@@ -38,6 +41,9 @@ const App = () => {
         <Route path="/apps" element={<AppsPage />} />
         <Route path="/apps/:slug" element={<AppDetailsPage />} />
         <Route path="/app/ishuri-calculator" element={<CalculatorPage />} />
+        <Route path="/app/ishuri-dictionary" element={<DictionaryPage />} />
+        <Route path="/app/ishuri-exams-prep-lite" element={<ExamsPrepLitePage />} />
+        <Route path="/app/ishuri-ai-assistant" element={<ProtectedRoute><AIAssistantPage /></ProtectedRoute>} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/auth/login" element={<LoginPage />} />

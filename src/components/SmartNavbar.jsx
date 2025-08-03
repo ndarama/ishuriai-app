@@ -38,6 +38,30 @@ const SmartNavbar = () => {
       );
     }
     
+    if (appPath === 'ishuri-dictionary') {
+      return (
+        <AppNavbar 
+          appName="Ishuri Dictionary" 
+          appDescription="Comprehensive multilingual dictionary with Kinyarwanda, French, English, and Swahili translations."
+          userPlan={userPlan}
+          showBackButton={true}
+          backTo={isAuthenticated ? "/my-apps" : "/apps"}
+        />
+      );
+    }
+    
+    if (appPath === 'ishuri-ai-assistant') {
+      return (
+        <AppNavbar 
+          appName="Ishuri AI Assistant" 
+          appDescription="AI-powered learning assistant for all subjects with personalized support."
+          userPlan={userPlan}
+          showBackButton={true}
+          backTo={isAuthenticated ? "/my-apps" : "/apps"}
+        />
+      );
+    }
+    
     // Default AppNavbar for other apps
     return (
       <AppNavbar 

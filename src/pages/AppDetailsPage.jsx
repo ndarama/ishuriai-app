@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams, Link as RouterLink, useNavigate } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 import {
   Box,
   Container,
@@ -23,6 +24,7 @@ import { appsData } from '../data/apps';
 const AppDetailsPage = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const { isAuthenticated, user } = useAuth();
   const app = appsData.find((a) => a.slug === slug);
 
   React.useEffect(() => {
@@ -32,12 +34,41 @@ const AppDetailsPage = () => {
   }, [app, navigate]);
 
   const handleOpenApp = () => {
-    if (app.slug === 'ishuri-calculator') {
-      navigate('/app/ishuri-calculator');
-    } else {
-      // For other apps, you can add their specific routes here
-      console.log(`Opening ${app.name}...`);
+    // Check if user is authenticated for paid apps
+    if (app.category !== 'free' && !isAuthenticated) {
+      navigate('/auth/login');
+      return;
     }
+    
+    // Define the app route mappings
+    const appRoutes = {
+      'ishuri-calculator': '/app/ishuri-calculator',
+      'ishuri-dictionary': '/app/ishuri-dictionary',
+      'ishuri-ai-assistant': '/app/ishuri-ai-assistant'
+    };
+    
+    const route = appRoutes[app.slug];
+    if (route) {
+      navigate(route);
+    } else {
+      // For other apps, you can add their specific routes to the appRoutes object above
+      console.log(`Opening ${app.name}... (route not yet implemented)`);
+    }
+  };
+  
+  const canAccessApp = () => {
+    if (app.category === 'free') return true;
+    if (!isAuthenticated) return false;
+    // For now, let authenticated users access all apps
+    // Later you can add subscription plan checking here
+    return true;
+  };
+  
+  const getButtonText = () => {
+    if (app.category === 'free') return 'Open App';
+    if (!isAuthenticated) return 'Login to Access';
+    if (!canAccessApp()) return 'Subscribe to Access';
+    return 'Open App';
   };
 
   return (
@@ -95,9 +126,9 @@ const AppDetailsPage = () => {
             <Button 
               colorScheme="brand" 
               onClick={handleOpenApp}
-              disabled={app.category !== 'free' && app.slug !== 'ishuri-calculator'}
+              disabled={false}
             >
-              {app.category === 'free' ? 'Open App' : 'Subscribe to Access'}
+              {getButtonText()}
             </Button>
           </Flex>
         </Stack>
